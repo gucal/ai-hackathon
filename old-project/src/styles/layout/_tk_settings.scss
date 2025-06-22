@@ -1,0 +1,85 @@
+.settings-content {
+  display: flex;
+  padding: var(--settings-extra-items-v-padding, 12px) 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--settings-extra-items-gap, 8px);
+  flex: 1 0 0;
+  align-self: stretch;
+
+  .setting-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--settings-body-compact-gap, 8px);
+    align-self: stretch;
+
+    .setting-label {
+      color: #000;
+
+      /* Body/Small-14 */
+      font-family: var(--body-s-font, Geologica);
+      font-size: var(--body-s-size, 14px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: var(--body-s-line-height, 20px);
+      /* 142.857% */
+    }
+
+    .options-container {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      gap: 8px;
+      align-self: stretch;
+      flex-wrap: wrap;
+
+      .option {
+        display: flex;
+        min-width: 96px;
+        padding: var(--settings-extra-items-v-padding, 12px)
+          var(--settings-extra-items-h-padding, 12px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--settings-extra-items-gap, 8px);
+        flex: 1 0 0;
+        border-radius: var(--settings-extra-items-radius, 8px);
+        border: 1px solid var(--border-light);
+        background: var(--static-light);
+
+        cursor: pointer;
+
+        &.selected {
+          border: 1px solid var(--states-info-base);
+          background: var(--states-info-lightest);
+        }
+
+        .option-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          align-self: stretch;
+
+          .option-icon {
+            color: var(--icon-sub-base);
+            font-size: 24px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        .option-bottom {
+          color: var(--text-darkest);
+
+          /* Body/Small-14 */
+          font-family: var(--body-s-font, Geologica);
+          font-size: var(--body-s-size, 14px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: var(--body-s-line-height, 20px);
+          /* 142.857% */
+        }
+      }
+    }
+  }
+}

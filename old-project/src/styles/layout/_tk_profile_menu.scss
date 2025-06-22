@@ -1,0 +1,66 @@
+.layout-menu-profile {
+  > button {
+    display: flex;
+    align-items: center;
+    width: 208px;
+    padding: 8px;
+    gap: 4px;
+    transition: background-color 260ms;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    background: var(--background-lightest);
+    cursor: pointer;
+
+    > span {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 0 0;
+
+      strong {
+        color: var(--text-darkest);
+        font-size: var(--desktop-body-s-size);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      small {
+        color: var(--text-base);
+        font-size: var(--desktop-body-xs-size);
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+
+    > i {
+      margin-left: auto;
+      transition: transform 260ms;
+      color: var(--icon-darkest);
+    }
+  }
+
+  > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition:
+      max-height 400ms cubic-bezier(0.86, 0, 0.07, 1),
+      opacity 400ms cubic-bezier(0.86, 0, 0.07, 1);
+
+    &.overlay {
+      transition:
+        opacity 100ms linear,
+        transform 120ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    > li {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &.active .layout-menu-profile-toggler {
+    transform: rotate(-180deg);
+  }
+}

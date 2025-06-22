@@ -1,0 +1,42 @@
+.tk-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  flex-wrap: wrap;
+
+  &.tk-footer-divided {
+    border-top: var(--spacing-px, 1px) solid var(--border-light, #e1e4ea);
+    background: var(--static-light, #fff);
+  }
+
+  .w-full {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 0px;
+    height: 36px;
+
+    .tk-footer-start {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+      color: var(--text-darkest);
+
+      .tk-footer-label {
+        max-width: 129px;
+        text-align: left;
+
+        /* Body/2x-Small-10 */
+        font-family: var(--body-2xs-font, Geologica);
+        font-size: var(--body-2xs-size, 11px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--line-height-xxs-normal, 16px);
+        /* 145.455% */
+      }
+    }
+  }
+}
